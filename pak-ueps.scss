@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Inter:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@200;500&display=swap');
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+ *{
+     box-sizing: border-box;
+     @include reset();
+ }
+$y:#FFCC24;
+$b:#123596;
+$w:#fff;
+$lb:#072FF5;
+
+@mixin center() {
+    display: flex;
+    // justify-content: center;
+    place-content: center;
+     
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    @include reset();
+    width: 100vw;
+    height: auto;
+}
+nav{
+    width: 100%;
+    height: 2.9rem;
+    background-color: $b;
+    @include center();
+    position: relative;
+    .home img{
+        width: 1.3rem;
+        height: 1.2rem;
+        position: absolute;
+        left: 60px;
+        top: 13px;
+       
+    } &::after{
+            content: "Home";
+            color: $w;
+            position: absolute;
+            left: 86px;
+            top: 15px;
+            text-transform: uppercase;
+
+        }
+    .glass img{
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        // left: 30%;
+        right: 188px;
+        top: 14px;
+    }
+    .search_bar{
+        width: 13.7rem;
+        height: 1.7rem;
+        background-color: $w;
+        position: absolute;
+        right: 210px;
+        top: 9px;
+        border-radius: 1rem;
+        padding: .4rem;
+        text-indent: .5rem;
+        color: rgba(14, 13, 13, 0.39);
+        font : {
+            weight: 400;
+            size: .9rem;
+        }
+        border: none;
+    }
+    .bars img{
+        position: absolute;
+        right: 80px;
+        top: 16px;
+        width: 1.3rem;
+        height: .9rem;
+    }
+    p{
+        position: absolute;
+        right: 107px;
+        top: 13px;
+        text-transform: uppercase;
+        color: #DBD8D8;
+        font : {
+            family: 'Montserrat', sans-serif;
+            weight: 700;
+             
+        }
+    }
+  
+}
+  header .banner img{
+         width: 100%;
+         height: auto;
+          
+}
+main{
+    display: flex;
+    justify-content:space-around;
+     flex-wrap: wrap;
+     margin-top: 2%;
+    .info img{
+        width: 120%;
+         
+    }
+    .aside img{
+        width: 110%;
+    }
+}
