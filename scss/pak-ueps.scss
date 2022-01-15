@@ -7,9 +7,9 @@
      box-sizing: border-box;
      @include reset();
  }
-$y:#FFCC24;
+$y:#FFA807;
 $b:#123596;
-$w:#fff;
+$w:rgb(255, 255, 255);
 $lb:#072FF5;
 
 @mixin center() {
@@ -24,19 +24,31 @@ body{
     @include reset();
     width: 100vw;
     height: auto;
+    .backdrop{
+        width: 100vw;
+        height: 100vh;
+        // margin-top: 5rem;
+        background-color: rgba(0, 0, 0, 0.616);
+        z-index: 1;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 }
 nav{
     width: 100%;
     height: 2.9rem;
     background-color: $b;
     @include center();
-    position: relative;
+    position: fixed;
+    z-index: 100;
     .home img{
         width: 1.3rem;
         height: 1.2rem;
         position: absolute;
         left: 60px;
-        top: 13px;
+        top: -33px;
        
     } &::after{
             content: "Home";
@@ -53,10 +65,10 @@ nav{
         position: absolute;
         // left: 30%;
         right: 188px;
-        top: 14px;
+        top: -31px;
     }
     .search_bar{
-        width: 13.7rem;
+        width: 14rem;
         height: 1.7rem;
         background-color: $w;
         position: absolute;
@@ -75,9 +87,10 @@ nav{
     .bars img{
         position: absolute;
         right: 80px;
-        top: 16px;
+        top: -31px;
         width: 1.3rem;
         height: .9rem;
+        cursor: pointer;
     }
     p{
         position: absolute;
@@ -91,12 +104,37 @@ nav{
              
         }
     }
-  
+    .con{
+        position: relative;
+        width: 100%;
+        height: 2.9rem;
+    }
+    
+    
 }
-  header .banner img{
+  header{
+  .banner 
+        {
+            position: relative;
+        }
+    img{
          width: 100%;
          height: auto;
-          
+         margin-top: 2.9rem;
+    }
+         .drop_nav{
+            height: 4rem;
+            width: 100vw;
+            background-color: $w;
+            position: absolute;
+            top: 2.9rem;
+             transition: margin-top .3s ease-out;
+             z-index: 15;
+            margin-top: -9rem;
+              
+            
+        }
+       
 }
 main{
     display: flex;
@@ -111,3 +149,91 @@ main{
         width: 110%;
     }
 }
+ .open{
+     display: block !important;
+ }
+ .drop_nav{ 
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      flex-wrap: wrap;
+          .a{
+              position: absolute;
+            left: 25px;
+            top: 8px;
+          }
+          .b{
+            position: absolute;
+          left: 8rem;
+          top: 8px;
+        }
+        .c{
+            position: absolute;
+            left: 28rem;
+            top: 8px;
+        }
+        .d{
+            position: absolute;
+             left: 31rem;
+             top: 8px;
+        }
+        .e{
+            position: absolute;
+             left: 40rem;
+             top: 8px;
+        }
+        .f{
+            position: absolute;
+             right: 32rem;
+             top: 8px;
+        }
+        .g{
+            position: absolute;
+             right: 29rem;
+             top: 2.2rem;
+        }
+        .h{
+            position: absolute;
+             right: 27rem;
+             top: 8px;
+        }
+        .i{
+            position: absolute;
+             left: 40rem;
+             top: 2.2rem;
+        }
+    .j{
+        position: absolute;
+        left: 3rem;
+        top: 2.2rem;
+    }
+        .k{
+            position: absolute;
+            left: 14rem;
+            top: 2.2rem;
+            
+        }
+        .l{
+            position: absolute;
+        left: 20rem;
+        top: 2.2rem;
+        }
+        .m{
+            position: absolute;
+            left: 26rem;
+            top: 2.2rem;
+        }
+        .n{
+            position: absolute;
+            left: 35rem;
+            top: 2.2rem;
+        }
+        .x img{
+                width: 1rem;
+                height: 1rem;position: absolute;
+            right: 6rem;
+            top: -2rem;
+            cursor: pointer;
+        }
+            
+ }

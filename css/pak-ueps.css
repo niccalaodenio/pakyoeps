@@ -14,6 +14,17 @@ body {
   height: auto;
 }
 
+body .backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.616);
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 nav {
   width: 100%;
   height: 2.9rem;
@@ -22,7 +33,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   place-content: center;
-  position: relative;
+  position: fixed;
+  z-index: 100;
 }
 
 nav .home img {
@@ -30,12 +42,12 @@ nav .home img {
   height: 1.2rem;
   position: absolute;
   left: 60px;
-  top: 13px;
+  top: -33px;
 }
 
 nav::after {
   content: "Home";
-  color: #fff;
+  color: white;
   position: absolute;
   left: 86px;
   top: 15px;
@@ -47,13 +59,13 @@ nav .glass img {
   height: 1rem;
   position: absolute;
   right: 188px;
-  top: 14px;
+  top: -31px;
 }
 
 nav .search_bar {
-  width: 13.7rem;
+  width: 14rem;
   height: 1.7rem;
-  background-color: #fff;
+  background-color: white;
   position: absolute;
   right: 210px;
   top: 9px;
@@ -69,9 +81,10 @@ nav .search_bar {
 nav .bars img {
   position: absolute;
   right: 80px;
-  top: 16px;
+  top: -31px;
   width: 1.3rem;
   height: .9rem;
+  cursor: pointer;
 }
 
 nav p {
@@ -84,9 +97,32 @@ nav p {
   font-weight: 700;
 }
 
-header .banner img {
+nav .con {
+  position: relative;
+  width: 100%;
+  height: 2.9rem;
+}
+
+header .banner {
+  position: relative;
+}
+
+header img {
   width: 100%;
   height: auto;
+  margin-top: 2.9rem;
+}
+
+header .drop_nav {
+  height: 4rem;
+  width: 100vw;
+  background-color: white;
+  position: absolute;
+  top: 2.9rem;
+  -webkit-transition: margin-top .3s ease-out;
+  transition: margin-top .3s ease-out;
+  z-index: 15;
+  margin-top: -9rem;
 }
 
 main {
@@ -106,5 +142,115 @@ main .info img {
 
 main .aside img {
   width: 110%;
+}
+
+.open {
+  display: block !important;
+}
+
+.drop_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.drop_nav .a {
+  position: absolute;
+  left: 25px;
+  top: 8px;
+}
+
+.drop_nav .b {
+  position: absolute;
+  left: 8rem;
+  top: 8px;
+}
+
+.drop_nav .c {
+  position: absolute;
+  left: 28rem;
+  top: 8px;
+}
+
+.drop_nav .d {
+  position: absolute;
+  left: 31rem;
+  top: 8px;
+}
+
+.drop_nav .e {
+  position: absolute;
+  left: 40rem;
+  top: 8px;
+}
+
+.drop_nav .f {
+  position: absolute;
+  right: 32rem;
+  top: 8px;
+}
+
+.drop_nav .g {
+  position: absolute;
+  right: 29rem;
+  top: 2.2rem;
+}
+
+.drop_nav .h {
+  position: absolute;
+  right: 27rem;
+  top: 8px;
+}
+
+.drop_nav .i {
+  position: absolute;
+  left: 40rem;
+  top: 2.2rem;
+}
+
+.drop_nav .j {
+  position: absolute;
+  left: 3rem;
+  top: 2.2rem;
+}
+
+.drop_nav .k {
+  position: absolute;
+  left: 14rem;
+  top: 2.2rem;
+}
+
+.drop_nav .l {
+  position: absolute;
+  left: 20rem;
+  top: 2.2rem;
+}
+
+.drop_nav .m {
+  position: absolute;
+  left: 26rem;
+  top: 2.2rem;
+}
+
+.drop_nav .n {
+  position: absolute;
+  left: 35rem;
+  top: 2.2rem;
+}
+
+.drop_nav .x img {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 6rem;
+  top: -2rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=pak-ueps.css.map */
